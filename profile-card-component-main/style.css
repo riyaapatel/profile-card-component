@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+body{
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 18px;
+  background-color: hsl(185, 75%, 39%);
+  overflow: hidden;
+}
+
+body::before, body::after{
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+body::before{
+  top: 0;
+  left: 0;
+  background: url("images/bg-pattern-top.svg") no-repeat bottom right;
+}
+body::after{
+  background: url("images/bg-pattern-bottom.svg") no-repeat;
+  top: 100%;
+  left: 100%;
+}
+
+.profile-card{
+  height: 340px;
+  width: 370px;
+  border-radius: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-card-top{
+  background: url("images/bg-pattern-card.svg");
+  border-radius: 20px 20px 0 0;
+  height: 135px;
+  width: 370px;
+}
+
+.profile-card-body{
+  background-color: white;
+  color: hsl(229, 23%, 23%);
+  border-radius: 0 0 20px 20px;
+}
+
+.profile-img{
+  position: absolute;
+  left: 180px;
+  transform: translate(-50%, -50%);
+  border: 5px solid white;
+  border-radius: 50px;
+}
+
+.profile-info{
+  padding: 70px 0px 20px;
+  text-align: center;
+}
+
+.profile-social{
+  padding: 30px 20px 0;
+  border-top: 1px solid #ccc;
+}
+
+.stats{
+  font-weight: 700;
+}
+
+.title{
+  font-size: 12px;
+  color: hsl(227, 10%, 46%);
+}
+
+.attribution{
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.author{
+  font-family: 'Sacramento', cursive;
+}
+
+@media screen and (max-width: 375px) {
+  .profile-card{
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+  }
+  .attribution{
+    position: absolute;
+    bottom: 5%;
+    left: 75%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+}
